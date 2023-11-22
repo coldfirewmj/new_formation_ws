@@ -1,0 +1,44 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/devel/include/**",
+        "/home/wmj/mav_catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/planner/drone_detect/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/planner/plan_manage/include/**",
+        "/home/wmj/mav_catkin_ws/src/mavros/libmavconn/include/**",
+        "/home/wmj/mav_catkin_ws/src/mavros/mavros/include/**",
+        "/home/wmj/mav_catkin_ws/src/mavros/mavros_msgs/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/uav_simulator/mockamap/include/**",
+        "/home/wmj/mav_catkin_ws/src/offboard_pkg/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/planner/path_searching/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/planner/plan_env/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/Utils/pose_utils/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/Utils/quadrotor_msgs/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/Utils/selected_points_publisher/include/**",
+        "/home/wmj/mav_catkin_ws/src/control/single_offb_pkg/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/uav_simulator/so3_control/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/uav_simulator/so3_quadrotor_simulator/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/planner/swarm_bridge/include/**",
+        "/home/wmj/mav_catkin_ws/src/control/swarm_offb_pkg/include/**",
+        "/home/wmj/mav_catkin_ws/src/mavros/test_mavros/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/planner/traj_opt/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/planner/traj_utils/include/**",
+        "/home/wmj/EGO-V2/EGO-Planner-v2/swarm-playground/main_ws/src/Utils/uav_utils/include/**",
+        "/home/wmj/mav_catkin_ws/src/control/vechicle_controller/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

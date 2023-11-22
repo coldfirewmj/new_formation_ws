@@ -1,0 +1,8 @@
+prefix=/home/wmj/new_formation_ws/devel
+
+Name: traj_utils
+Description: Description of traj_utils
+Version: 0.0.0
+Cflags: -I/home/wmj/new_formation_ws/devel/include -I/home/wmj/new_formation_ws/src/planner/traj_utils/include
+Libs: -L${prefix}/lib -ltraj_utils
+Requires: message_runtime
