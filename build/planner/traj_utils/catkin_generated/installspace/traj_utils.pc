@@ -1,8 +1,0 @@
-prefix=/home/wmj/new_formation_ws/install
-
-Name: traj_utils
-Description: Description of traj_utils
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -ltraj_utils
-Requires: message_runtime

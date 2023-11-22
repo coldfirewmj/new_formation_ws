@@ -1,8 +1,0 @@
-prefix=/home/wmj/new_formation_ws/install
-
-Name: ego_planner
-Description: Description of ego_planner
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lego_planner
-Requires: plan_env path_searching traj_opt traj_utils
