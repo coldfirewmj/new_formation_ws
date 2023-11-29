@@ -150,9 +150,9 @@ void publish_cmd(Vector3d p, Vector3d v, Vector3d a, Vector3d j, double y, doubl
   cmd.acceleration.x = a(0);
   cmd.acceleration.y = a(1);
   cmd.acceleration.z = a(2);
-  cmd.jerk.x = j(0);
-  cmd.jerk.y = j(1);
-  cmd.jerk.z = j(2);
+  // cmd.jerk.x = j(0);
+  // cmd.jerk.y = j(1);
+  // cmd.jerk.z = j(2);
   cmd.yaw = y;
   cmd.yaw_dot = yd;
   pos_cmd_pub.publish(cmd);

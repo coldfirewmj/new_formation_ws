@@ -9,7 +9,7 @@ namespace ego_planner
     exec_state_ = FSM_EXEC_STATE::INIT;
     have_target_ = false;
     have_odom_ = false;
-    have_recv_pre_agent_ = false;
+    have_recv_pre_agent_ = true;
     flag_escape_emergency_ = true;
     mandatory_stop_ = false;
 
