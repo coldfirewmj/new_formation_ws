@@ -9,8 +9,8 @@
     <arg name="init_z"/>
     <arg name="flight_type" default="2"/>
     <arg name="point_num" default="1"/>
-    <arg name="target0_x" default="46.0"/>
-    <arg name="target0_y" default="14.0"/>
+    <arg name="target0_x" default="14.0"/>
+    <arg name="target0_y" default="0.0"/>
     <arg name="target0_z" default="1.0"/>
     <arg name="target1_x" default="0.0"/>
     <arg name="target1_y" default="0.0"/>

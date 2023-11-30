@@ -730,7 +730,6 @@ namespace ego_planner
         return;
       }
     }
-
     /* Fill up the buffer */
     if (planner_manager_->traj_.swarm_traj.size() <= recv_id)
     {

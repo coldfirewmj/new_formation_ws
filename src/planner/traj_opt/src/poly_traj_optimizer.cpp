@@ -1779,7 +1779,7 @@ bool PolyTrajOptimizer::formationGradCostP(const int i_dp,
 
     nh.param("formation/num", formation_num_, -1);
     formation_.resize(3, formation_num_);
-    for (int i = 0; i < formation_num_; i++)
+    for (int i = 1; i < formation_num_; i++)
     {
       std::vector<double> pos;
       nh.getParam("formation/drone" + to_string(i), pos);

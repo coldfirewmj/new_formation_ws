@@ -124,7 +124,7 @@
         <param name="optimization/weight_obstacle" value="10000.0" type="double"/>
         <param name="optimization/weight_obstacle_soft" value="5000.0" type="double"/>
         <param name="optimization/weight_swarm" value="10000.0" type="double"/>
-        <param name="optimization/weight_formation" value="100" type="double"/>
+        <param name="optimization/weight_formation" value="1000" type="double"/>
         <param name="optimization/weight_feasibility" value="10000.0" type="double"/>
         <param name="optimization/weight_sqrvariance" value="10000.0" type="double"/>
         <param name="optimization/weight_time" value="10.0" type="double"/>
@@ -136,12 +136,13 @@
         <param name="optimization/max_jer" value="$(arg max_jer)" type="double"/>
         <param name="optimization/record_opt" value="true"/>
         <!-- formation-->
-        <param name="formation/num" value="9"/>
-        <rosparam param="formation/start">[-14,4,1]</rosparam>
+        <!-- 此处的formation/num应该为飞机总数+1，以适应源代码结构 -->
+        <param name="formation/num" value="4"/>
+        <rosparam param="formation/start">[0,0,1]</rosparam>
         <rosparam param="formation/drone0">[  0,  0, 0]</rosparam>
-        <rosparam param="formation/drone1">[  2,  0, 0]</rosparam>
-        <rosparam param="formation/drone2">[  0, 2.0, 0]</rosparam>
-        <rosparam param="formation/drone3">[  0,  4.0, 0]</rosparam>
+        <rosparam param="formation/drone1">[  0,-2.0, 0]</rosparam>
+        <rosparam param="formation/drone2">[  2.0, 0, 0]</rosparam>
+        <rosparam param="formation/drone3">[  0,2.0, 0]</rosparam>
         <rosparam param="formation/drone4">[  2,  2.0, 0]</rosparam>
         <rosparam param="formation/drone5">[  4, -0, 0]</rosparam>
         <rosparam param="formation/drone6">[  2,  -2, 0]</rosparam>
