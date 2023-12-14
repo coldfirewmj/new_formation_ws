@@ -446,7 +446,6 @@ namespace ego_planner
 
   bool EGOReplanFSM::callReboundReplan(bool flag_use_poly_init, bool flag_randomPolyTraj)
   {
-
     planner_manager_->getLocalTarget(
         planning_horizen_, start_pt_, final_goal_,
         local_target_pt_, local_target_vel_,
@@ -536,7 +535,6 @@ namespace ego_planner
     final_goal_ = next_wp + Eigen::Vector3d(dir(0) * formation_pos_(0) - dir(1) * formation_pos_(1),
                                         dir(1) * formation_pos_(0) + dir(0) * formation_pos_(1),
                                         formation_pos_(2));
-
     bool success = false;
     std::vector<Eigen::Vector3d> one_pt_wps;
     one_pt_wps.push_back(final_goal_);

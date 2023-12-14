@@ -1593,7 +1593,6 @@ bool PolyTrajOptimizer::formationGradCostP(const int i_dp,
     gradt = 0;
     grad_prev_t = 0;
     costp = 0;
-
     // std::cout<<"Fstart is: "<<FStart_.transpose()<<std::endl;
     // std::cout<<"FEnd_ is: "<<FEnd_.transpose()<<std::endl;
 
@@ -1606,7 +1605,7 @@ bool PolyTrajOptimizer::formationGradCostP(const int i_dp,
     double l = 0, dl_dt = 0;
     int count_drone=0;
     int id_end = drone_id_ == (formation_num_-1) ? formation_num_ -1 : formation_num_;
-    for (int id = 0; id < id_end; ++id)
+    for (int id = 0; id < swarm_trajs_->size(); ++id)
     {
       if ((swarm_trajs_->at(id).drone_id < 0) || swarm_trajs_->at(id).drone_id == drone_id_)
         continue;
@@ -1635,7 +1634,7 @@ bool PolyTrajOptimizer::formationGradCostP(const int i_dp,
                   exceed_time * swarm_v;
       }
 
-      l += (swarm_p - O).dot(a) - formation_(0, id);
+      l += (swarm_p - O).dot(a) - formation_(0, swarm_trajs_->at(id).drone_id);
       dl_dt += a.dot(swarm_v);
     }
     l /= (count_drone);
