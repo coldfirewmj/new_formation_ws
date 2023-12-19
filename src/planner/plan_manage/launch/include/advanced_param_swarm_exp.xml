@@ -155,9 +155,9 @@
     <param name="formation/num" value="4"/>
     <rosparam param="formation/start">[0,0,1]</rosparam>
     <rosparam param="formation/drone0">[  0,  0, 0]</rosparam>
-    <rosparam param="formation/drone1">[  0,-2.0, 0]</rosparam>
-    <rosparam param="formation/drone2">[  2.0, 0, 0]</rosparam>
-    <rosparam param="formation/drone3">[  0,2.0, 0]</rosparam>
+    <rosparam param="formation/drone1">[  0,-1.0, 0]</rosparam>
+    <rosparam param="formation/drone2">[  1.0, 0, 0]</rosparam>
+    <rosparam param="formation/drone3">[  0,1.0, 0]</rosparam>
     <rosparam param="formation/drone4">[  2,  2.0, 0]</rosparam>
     <rosparam param="formation/drone5">[  4, -0, 0]</rosparam>
     <rosparam param="formation/drone6">[  2,  -2, 0]</rosparam>
