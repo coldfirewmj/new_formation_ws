@@ -1637,24 +1637,26 @@ bool PolyTrajOptimizer::formationGradCostP(const int i_dp,
       l += (swarm_p - O).dot(a) - formation_(0, swarm_trajs_->at(id).drone_id);
       dl_dt += a.dot(swarm_v);
     }
-    l /= (count_drone);
-    dl_dt /= (count_drone);
+    if (count_drone>0)
+    {
+      l /= (count_drone);
+      dl_dt /= (count_drone);
 
-    // cout << "drone_id_=" << drone_id_ << endl;
-    // cout << "t=" << t << endl;
-    // cout << "l=" << l << endl;
-    // cout << "dl_dt=" << dl_dt << endl;
+      // cout << "drone_id_=" << drone_id_ << endl;
+      // cout << "t=" << t << endl;
+      // cout << "l=" << l << endl;
+      // cout << "dl_dt=" << dl_dt << endl;
 
-    Eigen::Vector3d tar_p;
-    tar_p.x() = (a(0) * (formation_(0, drone_id_) + l) - a(1) * formation_(1, drone_id_)) + O(0);
-    tar_p.y() = (a(1) * (formation_(0, drone_id_) + l) + a(0) * formation_(1, drone_id_)) + O(1);
-    tar_p.z() = a(2) * l + formation_(2, drone_id_) + O(2);
-    Eigen::Vector3d dJ_dp = 2 * (p - tar_p);
-    costp = wei_formation_ * (dJ_dp / 2).squaredNorm();
-    gradp = wei_formation_ * dJ_dp;
-    gradt = wei_formation_ * dJ_dp.dot(v - a * dl_dt);
-    grad_prev_t = wei_formation_ * dJ_dp.dot(-a * dl_dt);
-
+      Eigen::Vector3d tar_p;
+      tar_p.x() = (a(0) * (formation_(0, drone_id_) + l) - a(1) * formation_(1, drone_id_)) + O(0);
+      tar_p.y() = (a(1) * (formation_(0, drone_id_) + l) + a(0) * formation_(1, drone_id_)) + O(1);
+      tar_p.z() = a(2) * l + formation_(2, drone_id_) + O(2);
+      Eigen::Vector3d dJ_dp = 2 * (p - tar_p);
+      costp = wei_formation_ * (dJ_dp / 2).squaredNorm();
+      gradp = wei_formation_ * dJ_dp;
+      gradt = wei_formation_ * dJ_dp.dot(v - a * dl_dt);
+      grad_prev_t = wei_formation_ * dJ_dp.dot(-a * dl_dt);
+    }
     return true;
   }
 

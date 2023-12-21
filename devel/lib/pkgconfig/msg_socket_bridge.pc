@@ -1,0 +1,8 @@
+prefix=/home/wmj/new_formation_ws/devel
+
+Name: msg_socket_bridge
+Description: Description of msg_socket_bridge
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: traj_utils

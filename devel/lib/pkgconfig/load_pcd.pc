@@ -1,0 +1,8 @@
+prefix=/home/wmj/new_formation_ws/devel
+
+Name: load_pcd
+Description: Description of load_pcd
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: pcl_conversions pcl_ros roscpp sensor_msgs
