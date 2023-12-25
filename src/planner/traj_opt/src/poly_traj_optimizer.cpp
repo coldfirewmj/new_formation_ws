@@ -1586,8 +1586,8 @@ bool PolyTrajOptimizer::formationGradCostP(const int i_dp,
   {
     if (i_dp <= 0 || i_dp > ConstraintPoints::two_thirds_id(cps_.points, touch_goal_)) // only apply to first 2/3
       return false;
-    if ((int)swarm_trajs_->size() < formation_num_ && drone_id_ != formation_num_-1)
-      return false;
+    // if ((int)swarm_trajs_->size() < formation_num_ && drone_id_ != formation_num_-1)
+    //   return false;
 
     gradp.setZero();
     gradt = 0;

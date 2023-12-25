@@ -21,6 +21,7 @@
 #include <traj_utils/planning_visualization.h>
 #include <traj_utils/PolyTraj.h>
 #include <traj_utils/MINCOTraj.h>
+#include <std_msgs/Float32MultiArray.h>
 
 using std::vector;
 
@@ -110,6 +111,7 @@ namespace ego_planner
 
     /* global trajectory */
     void waypointCallback(const quadrotor_msgs::GoalSetPtr &msg);
+    void remoteWaypointCallback(const std_msgs::Float32MultiArrayPtr &msg);
     void readGivenWpsAndPlan();
     bool planNextWaypoint(const Eigen::Vector3d next_wp);
     bool mondifyInCollisionFinalGoal();

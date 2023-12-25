@@ -76,15 +76,16 @@ namespace ego_planner
     {
       trigger_sub_ = nh.subscribe("/traj_start_trigger", 1, &EGOReplanFSM::triggerCallback, this);
 
-      ROS_INFO("Wait for 2 second.");
-      int count = 0;
-      while (ros::ok() && count++ < 2000)
-      {
-        ros::spinOnce();
-        ros::Duration(0.001).sleep();
-      }
+      // ROS_INFO("Wait for 2 second.");
+      // int count = 0;
+      // while (ros::ok() && count++ < 200)
+      // {
+      //   ros::spinOnce();
+      //   ros::Duration(0.001).sleep();
+      // }
+      waypoint_sub_ = nh.subscribe("/swarm/ego_trigger", 1,&EGOReplanFSM::remoteWaypointCallback,this);
 
-      readGivenWpsAndPlan();
+      // readGivenWpsAndPlan();
     }
     else
       cout << "Wrong target_type_ value! target_type_=" << target_type_ << endl;
@@ -627,6 +628,12 @@ namespace ego_planner
     {
       have_trigger_ = true;
     }
+  }
+
+  void EGOReplanFSM::remoteWaypointCallback(const std_msgs::Float32MultiArrayPtr &msg)
+  {
+    ROS_INFO("recv point,drone_ID %d",planner_manager_->pp_.drone_id);
+    readGivenWpsAndPlan();
   }
 
   void EGOReplanFSM::readGivenWpsAndPlan()
