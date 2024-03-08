@@ -1,0 +1,9 @@
+Point2f position #位置x,y
+float64 velocity #速度,m/s
+float64 acceleration #加速度,m/s2
+float64 yaw #航向角，rad
+float64 curvature #曲率，预留
+float64 dkappa #路径曲率导数
+float64 s #里程，米
+float64 relative_time #相对时间,s
+int8 point_type #轨迹点类型,0-正常路径点，1-终点

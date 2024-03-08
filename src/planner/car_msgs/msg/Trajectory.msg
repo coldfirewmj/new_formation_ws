@@ -1,0 +1,9 @@
+Header qyheader #消息公共头
+uint64 frame_number #消息帧号
+int8 plan_cmd #决策指令，用于后期扩展，0-沿规划轨迹行驶，1-立即停车...
+float64 total_trajectory_length #总路程长度
+float64 total_trajectory_time #总路程时间
+int32 start_index #局部路径在route中起点索引
+int32 end_index #局部路径在route中终点索引
+TrajectoryPoint[] trajectorypoints #局部路径轨迹点
+bool gear #前进档还是倒退档
